@@ -21,7 +21,7 @@ REDIS_EXPIRY_TIME = 299  # Cache expiry time in seconds (5 minutes)
 scheduler = BackgroundScheduler()
 
 # Initialize Redis client
-redis_client = redis.Redis(host=settings.REDIS_HOST, port=settings.REDIS_PORT, db=0)
+redis_client = redis.StrictRedis.from_url(settings.REDIS_URL, decode_responses=True)
 
 # Fetch current weather data from OpenWeatherMap API
 async def fetch_weather_data(city: str):
