@@ -1,0 +1,13 @@
+fastapi
+uvicorn
+pydantic
+sqlalchemy
+psycopg2
+asyncpg
+pydantic[email]
+httpx 
+python-dotenv
+APScheduler
+schedule
+python-dotenv
+redis
