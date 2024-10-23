@@ -122,7 +122,7 @@ async def scheduled_fetch_weather():
     await asyncio.gather(*tasks)  # Running all the fetch and process tasks concurrently
 
 # Start the scheduler
-scheduler.add_job(scheduled_fetch_weather, 'interval', minutes=0.1)
+scheduler.add_job(scheduled_fetch_weather, 'interval', minutes=5)
 scheduler.start()
 
 # To keep the event loop running
