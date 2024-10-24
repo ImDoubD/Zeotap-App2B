@@ -7,8 +7,8 @@ from service.weatherFetch import fetch_weather_data, CITIES, get_weather_data_fr
 from service.weatherSummary import calculate_daily_summaries
 from service.forecast import fetch_forecast_data
 from service.historicalData import fetch_historical_weather_data
-from models import WeatherData, DailySummary, Alert
-from sqlalchemy.ext.asyncio import AsyncSession, create_async_engine
+from models import DailySummary
+from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.future import select
 
 router = APIRouter()
